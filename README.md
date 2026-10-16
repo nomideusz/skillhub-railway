@@ -66,7 +66,17 @@ Either way, admins can promote or disable users under the admin pages. For GitHu
 
 **Upgrades.** Change the image tag on **server** and **scanner**. On the **SkillHub** service, change the `SKILLHUB_WEB_IMAGE` build argument in your fork's Dockerfile. Database migrations run automatically when the server starts.
 
-**Resources.** Measured on Railway, idle after the first boot: IDLE_TOTAL of RAM in total (server IDLE_SERVER, scanner IDLE_SCANNER, the rest under IDLE_REST). That needs the Hobby plan or higher.
+**Resources.** Measured on Railway, idle after the first boot:
+
+| Service | RAM |
+| --- | --- |
+| server | about 750 MB |
+| scanner | about 150 MB |
+| Postgres | about 120 MB |
+| SkillHub web and Redis | about 60 MB together |
+| **Total** | **about 1.1 GB** |
+
+The Java server is over the Free plan's 0.5 GB per service and close to the Trial plan's 1 GB, so use the Hobby plan or higher.
 
 ## Why Deploy SkillHub on Railway?
 
