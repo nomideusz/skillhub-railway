@@ -4,7 +4,9 @@
   "b1c39543-8337-4d70-975f-58f6c173e594": {
    "icon": "https://raw.githubusercontent.com/nomideusz/skillhub-railway/main/icon.png",
    "name": "SkillHub",
-   "build": {},
+   "build": {
+    "dockerfilePath": "Dockerfile"
+   },
    "deploy": {
     "startCommand": null,
     "healthcheckPath": "/nginx-health",
@@ -12,7 +14,8 @@
     "restartPolicyMaxRetries": 10
    },
    "source": {
-    "image": "ghcr.io/iflytek/skillhub-web:v0.2.22"
+    "repo": "https://github.com/nomideusz/skillhub-railway",
+    "rootDirectory": null
    },
    "networking": {
     "serviceDomains": {
@@ -41,6 +44,11 @@
     "PORT": {
      "defaultValue": "80",
      "description": "nginx port behind the Railway domain - leave as is",
+     "isOptional": false
+    },
+    "SKILLHUB_ALLOW_SIGNUP": {
+     "defaultValue": "false",
+     "description": "Let anyone with the URL create an account. Off by default: the admin creates accounts, or you set this to true and redeploy.",
      "isOptional": false
     }
    }
@@ -200,7 +208,7 @@
    "name": "scanner",
    "build": {},
    "deploy": {
-    "startCommand": "uvicorn skillhub_scanner_app:app --host :: --port 8000",
+    "startCommand": null,
     "healthcheckPath": "/health",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 10

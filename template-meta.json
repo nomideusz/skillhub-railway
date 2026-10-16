@@ -5,5 +5,6 @@
   "category": "AI/ML",
   "image": "https://raw.githubusercontent.com/nomideusz/skillhub-railway/main/icon.png",
   "card_desc": "SkillHub: an open-source, self-hosted registry for AI agent skills by iFLYTEK. Publish and version skill packages, scan them for risky behaviour before release, and govern who can publish with namespaces, roles and review.",
-  "deploy_marker": "ghcr.io/iflytek/skillhub-server:v0.2.22"
+  "deploy_marker": "ghcr.io/iflytek/skillhub-server:v0.2.22",
+  "id": "906b4c39-60a7-42b6-ba32-dfdceacfef85"
 }
