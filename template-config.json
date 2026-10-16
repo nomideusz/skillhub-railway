@@ -187,8 +187,8 @@
      "isOptional": false
     },
     "JAVA_TOOL_OPTIONS": {
-     "defaultValue": "-Xmx512m",
-     "description": "JVM heap cap. Without it the JVM sizes its heap from the plan's RAM limit, not from what it needs.",
+     "defaultValue": "-Xmx512m -XX:+UseSerialGC -XX:MaxMetaspaceSize=192m -XX:ReservedCodeCacheSize=64m -Xss512k",
+     "description": "JVM memory caps. Without them the JVM sizes itself from the plan's RAM limit, not from what the registry needs. Raise -Xmx for many users or big uploads.",
      "isOptional": false
     },
     "RAILWAY_RUN_UID": {
@@ -199,6 +199,11 @@
     "PORT": {
      "defaultValue": "8080",
      "description": "Server port - leave as is",
+     "isOptional": false
+    },
+    "MALLOC_ARENA_MAX": {
+     "defaultValue": "2",
+     "description": "Fewer glibc malloc arenas - saves ~100 MB of RAM for the JVM",
      "isOptional": false
     }
    }
@@ -259,7 +264,7 @@
     "restartPolicyMaxRetries": 10
    },
    "source": {
-    "image": "postgres:17.11-alpine"
+    "image": "postgres:16.15-alpine"
    },
    "networking": {
     "serviceDomains": {}
