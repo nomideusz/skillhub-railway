@@ -36,7 +36,7 @@ This template runs the official `v0.2.22` images as five services:
 
 - [SkillHub on GitHub](https://github.com/iflytek/skillhub)
 - [SkillHub user guide](https://iflytek.github.io/skillhub/)
-- [Template source on GitHub](https://github.com/nomideusz/skillhub-railway)
+- [Template source on GitHub](https://github.com/two-workspaces/skillhub)
 
 ### Implementation Details
 

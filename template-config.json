@@ -2,7 +2,7 @@
  "buckets": {},
  "services": {
   "b1c39543-8337-4d70-975f-58f6c173e594": {
-   "icon": "https://raw.githubusercontent.com/nomideusz/skillhub-railway/main/icon.png",
+   "icon": "https://raw.githubusercontent.com/two-workspaces/skillhub/main/icon.png",
    "name": "SkillHub",
    "build": {
     "dockerfilePath": "Dockerfile"
@@ -14,7 +14,7 @@
     "restartPolicyMaxRetries": 10
    },
    "source": {
-    "repo": "https://github.com/nomideusz/skillhub-railway",
+    "repo": "https://github.com/two-workspaces/skillhub",
     "rootDirectory": null
    },
    "networking": {
@@ -54,7 +54,7 @@
    }
   },
   "0f851003-4e3b-4bdb-8b6f-e002f55af19f": {
-   "icon": "https://raw.githubusercontent.com/nomideusz/skillhub-railway/main/icon.png",
+   "icon": "https://raw.githubusercontent.com/two-workspaces/skillhub/main/icon.png",
    "name": "server",
    "build": {},
    "deploy": {
@@ -209,7 +209,7 @@
    }
   },
   "ded164b2-0a64-4d65-8328-a4b728270439": {
-   "icon": "https://raw.githubusercontent.com/nomideusz/skillhub-railway/main/icon.png",
+   "icon": "https://raw.githubusercontent.com/two-workspaces/skillhub/main/icon.png",
    "name": "scanner",
    "build": {},
    "deploy": {
